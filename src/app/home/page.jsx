@@ -2,6 +2,8 @@
 import { Globe } from "@/components/magicui/globe"
 import Link from "next/link";
 import Searchdata from '../../common/Search'
+import Clients from '../../common/Clients'
+import Testimonials from '../../common/Testimonials'
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
@@ -9,8 +11,7 @@ import { RainbowButton } from "@/components/magicui/rainbow-button";
 import { ArrowRight, ArrowUpRight, Factory, Star, Triangle } from "lucide-react";
 import { Safari } from "@/components/magicui/safari";
 import Slider from "react-slick";
-import { Marquee } from "@/components/magicui/marquee";
-import { small } from "motion/react-client";
+
 
 const HomePage = () => {
     const canvasRef = useRef();
@@ -66,44 +67,10 @@ const HomePage = () => {
         slidesToScroll: 1
     };
 
-    var testimonials = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        autoplay:true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
+    
     return (
         <>
-            <section className="h-full pt-[76px] md:py-0 md:h-[90vh] flex justify-center items-center overflow-hidden relative bg-gradient-to-br bg-white bg-gradient-45 bg-opacity-50">
+            <section className="h-full pt-[50px] md:py-0 md:h-[80vh] flex justify-center items-center overflow-hidden relative bg-gradient-to-br bg-white bg-gradient-45 bg-opacity-50">
                 <div className='absolute top-0 w-full h-screen z-0 opacity-60'>
                     <img src="./images/banner.webp" className='w-full' alt="" />
                 </div>
@@ -288,7 +255,7 @@ const HomePage = () => {
             </section>
 
 
-            <section className="pb-20 pt-10 mapbg px-10">
+            <section className="pb-20 pt-10 mapbg px-10 bg-gray-300">
                 <div className="container mx-auto">
                     <div className="flex flex-col justify-center items-center">
                         <h3 className="text-black font-semibold text-center text-base bg-emerald-50 py-1 px-2 border rounded-full inline-block">✨ Global Import Export Database</h3>
@@ -369,167 +336,11 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <section className='py-20 dotbg px-10'>
-                <div className="container px-3 md:px-0 mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-                        <div>
-                            <h4 className="text-black font-semibold text-center text-base bg-emerald-50 py-1 px-2 border rounded-full inline-block">✨Our Clients</h4>
-                            <h3 className="mx-auto mb-5 text-balance text-4xl font-bold text-black my-5">Trusted By Top Brands</h3>
-                            <p className='text-base text-gray-700 text-justify'>We are privileged to work with some of the most prestigious clients in the industry. Our vision is to deliver fast, prompt & reliable information to our clients that adds value to their business.</p>
-                        </div>
-                        <div>
-                            <div className="relative">
-                                <Marquee pauseOnHover className="[--duration:20s]">
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/bcg.png" alt="" />
-                                    </div>
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/absolute-advantage_logo.png" alt="" />
-                                    </div>
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/afepasa.png" alt="" />
-                                    </div>
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/lonza.png" alt="" />
-                                    </div>
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/neohealth.png" alt="" />
-                                    </div>
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/duracell.png" alt="" />
-                                    </div>
-                                </Marquee>
-                                <Marquee reverse pauseOnHover className="[--duration:20s]">
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/bcg.png" alt="" />
-                                    </div>
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/absolute-advantage_logo.png" alt="" />
-                                    </div>
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/afepasa.png" alt="" />
-                                    </div>
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/lonza.png" alt="" />
-                                    </div>
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/neohealth.png" alt="" />
-                                    </div>
-                                    <div className="p-3 bg-white border shadow w-[180px] rounded-2xl h-[100px] flex justify-center items-center">
-                                        <img className="w-[150px] object-contain" src="./images/clients/duracell.png" alt="" />
-                                    </div>
-                                </Marquee>
-                                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-                                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Clients />
 
-            <section className="pb-20 pt-10 px-10">
-                <div className="container mx-auto">
-                    <div className="flex flex-col justify-center items-center mb-10">
-                        <h3 className="text-black font-semibold text-center text-base bg-emerald-50 py-1 px-2 border rounded-full inline-block">✨ Testimonials</h3>
-                        <h2 className="mx-auto mb-2 text-center text-balance text-4xl font-bold leading-snug my-2">Our Client’s Testimonials</h2>
-                        <p className='text-base text-gray-700 text-center max-w-5xl mx-auto'>We are known to deliver quality services to our clients. See what they are saying?</p>
-                    </div>
-                    <Slider {...testimonials}>
-                        <div>
-                            <div>
-                                <div className="p-4 rounded-2xl relative bg-gray-100">
-                                    <h6 className="text-lg text-pink-800 capitalize font-bold">excellent customer service</h6>
-                                    <p className='text-base text-gray-700 mx-auto'>We've been using Exim Trade Data for updated Global import-export data, and the experience has been outstanding. Their data is accurate and up-to-date, which has significantly improved our decision-making. The team is professional, responsive, and always ready to assist with any queries. I highly recommend Exim Trade Data for reliable import export data and <b className="text-pink-800">excellent customer service</b>.</p>
-                                    <Triangle className="absolute fill-gray-100 rotate-90 -left-0.5 text-transparent -bottom-3" />
-                                </div>
-                                <div className="flex mt-3 gap-5 items-center">
-                                    <div className="w-14 h-14 rounded-full bg-pink-800 flex justify-center items-center">
-                                        <h6 className="text-2xl font-semibold text-white">D</h6>
-                                    </div>
-                                    <div>
-                                        <h5 className="text-xl font-semibold text-black">Divya Varshney</h5>
-                                        <div className="flex gap-1">
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <div className="p-4 rounded-2xl relative bg-gray-100">
-                                    <h6 className="text-lg text-yellow-500 capitalize font-bold">very professional</h6>
-                                    <p className='text-base text-gray-700 mx-auto'>I recently approached Exim Trade Data for global import export data related to electronic products for my business. They were <b className="text-yellow-500">very professional</b> in their approach and swiftly provided the required data in a short span of time. I had a good experience getting service from them.I will surely approach them in the future as well.</p>
-                                    <Triangle className="absolute fill-gray-100 rotate-90 -left-0.5 text-transparent -bottom-3" />
-                                </div>
-                                <div className="flex mt-3 gap-5 items-center">
-                                    <div className="w-14 h-14 rounded-full bg-yellow-500 flex justify-center items-center">
-                                        <h6 className="text-2xl font-semibold text-white">H</h6>
-                                    </div>
-                                    <div>
-                                        <h5 className="text-xl font-semibold text-black">Harshit Saxena</h5>
-                                        <div className="flex gap-1">
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <div className="p-4 rounded-2xl relative bg-gray-100">
-                                    <h6 className="text-lg text-sky-600 capitalize font-bold">outstanding</h6>
-                                    <p className='text-base text-gray-700 mx-auto'>We've been using Exim Trade Data for updated Global import-export data, and the experience has been <b className="text-sky-600">outstanding</b>. Their data is accurate and up-to-date, which has significantly improved our decision-making. The team is professional, responsive, and always ready to assist with any queries. I highly recommend Exim Trade Data for reliable import export data and excellent customer service.</p>
-                                    <Triangle className="absolute fill-gray-100 rotate-90 -left-0.5 text-transparent -bottom-3" />
-                                </div>
-                                <div className="flex mt-3 gap-5 items-center">
-                                    <div className="w-14 h-14 rounded-full bg-sky-600 flex justify-center items-center">
-                                        <h6 className="text-2xl font-semibold text-white">A</h6>
-                                    </div>
-                                    <div>
-                                        <h5 className="text-xl font-semibold text-black">Anjali Mishra</h5>
-                                        <div className="flex gap-1">
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <div className="p-4 rounded-2xl relative bg-gray-100">
-                                    <h6 className="text-lg text-green-600 capitalize font-bold">smooth onboarding experience!</h6>
-                                    <p className='text-base text-gray-700 mx-auto'>We had a great experience working with Goutam for the EXIM website data. He was incredibly helpful in guiding us through the portal, patiently explaining how to access and interpret the data effectively. His support made it easy for us to get started, and the information provided through the 6-month subscription has been clear, well-structured, and valuable for our analysis. A big thanks to Goutam for his proactive assistance and <b className="text-green-600">smooth onboarding experience!</b></p>
-                                    <Triangle className="absolute fill-gray-100 rotate-90 -left-0.5 text-transparent -bottom-3" />
-                                </div>
-                                <div className="flex mt-3 gap-5 items-center">
-                                    <div className="w-14 h-14 rounded-full bg-green-600 flex justify-center items-center">
-                                        <h6 className="text-2xl font-semibold text-white">B</h6>
-                                    </div>
-                                    <div>
-                                        <h5 className="text-xl font-semibold text-black">Bhavya Sri Nadella</h5>
-                                        <div className="flex gap-1">
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                            <Star className="fill-orange-400 text-orange-400" size={15} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </Slider>
-                </div>
-            </section>
+            
+            <Testimonials />
+            
 
 
         </>

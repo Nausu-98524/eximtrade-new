@@ -30,8 +30,8 @@ const Header = () => {
   return (
     <>
       <div
-        className={` absolute ${scrolled ? "sticky top-0 bg-[#ffffffbd]" : "bg-transparent"
-          }  px-2 md:px-0 top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 supports-backdrop-blur:bg-white/60 `}
+        className={`relative myshadow ${scrolled ? "sticky top-0 bg-[#ffffffbd]" : "bg-transparent"
+          }  px-2 md:px-0 top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-[999] lg:border-b lg:border-slate-900/10 supports-backdrop-blur:bg-white/60 `}
       >
         <header className="container mx-auto py-1 flex items-center justify-between">
           <Link href="/" className="font-bold text-white text-xl">
@@ -45,12 +45,12 @@ const Header = () => {
                 </Link>
               </li>
               <li className="relative group px-3 py-[30px] cursor-pointer">
-                <Link href="/about" className="hover:opacity-50">
+                <Link href="/aboutus" className="hover:opacity-50">
                   About
                 </Link>
               </li>
               <li className="relative group px-3 py-[30px] cursor-pointer">
-                <Link href="/services" className="hover:opacity-50">
+                <Link href="/" className="hover:opacity-50">
                   Services
                 </Link>
               </li>
@@ -58,7 +58,7 @@ const Header = () => {
 
               <li className="group px-3 py-[30px] cursor-pointer">
                 <button className="hover:opacity-50">Solutions</button>
-                <div className="absolute top-[45px] left-0 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[1200px] w-full transform">
+                <div className="absolute top-[45px] left-0 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-[999] min-w-[1200px] w-full transform">
                   {/* <div className="w-10 h-10 bg-white transform rotate-45 absolute top-5 z-0 translate-x-0 transition-transform group-hover:translate-x-[13rem] duration-500 ease-in-out rounded-sm"></div> */}
                   <div className="container mx-auto">
                     <div className="relative top-6 p-6 bg-white z-10 rounded-xl shadow-xl w-full">

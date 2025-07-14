@@ -208,3 +208,6 @@
 		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
 		var(--dot-color);
 }
+.myshadow{
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
